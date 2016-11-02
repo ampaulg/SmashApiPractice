@@ -12,7 +12,7 @@ function getName(){
 		return;
 	}
 
-	//make argument for api open function
+	//make the argument for api open function
 	var str1 = "http://api.kuroganehammer.com/api/Characters/";
 	var str2 = entry.toString();
 	var str3 = "?fields=name";
@@ -24,11 +24,7 @@ function getName(){
 	var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", str1, false );
     xmlHttp.send( null );
-    
-    //parse and print
-    var str4 = xmlHttp.responseText;
-    var len4 = str4.length-4; // probably not the right way to parse,
-    						  // I should look into this
-	str4 = str4.substring(14, len4);
-	element.innerHTML = str4;
+
+    //get the name from the JSON object
+	element.innerHTML = JSON.parse(xmlHttp.responseText).name;
 }
