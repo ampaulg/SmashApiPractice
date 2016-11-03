@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onLoad="makeSelect()">
 	<script src="kuroTest.js"></script>
 		
 	<h1>Trying to get info off KuroganeHammer Api</h1>
-
-	<p>Input a number from 1 to 58</p>
-	<input id="entry" type="number" name="fname">
-	<button onclick="getName()">Get name</button>
-
+	
+	<p>Select character:</p>
+	<p id = "selectBox"></p>
+	<button onclick="getInfo()">Get Info</button>
+	
+	<p>Name:</p>
 	<p id = "results1"></p>
-
+	<p>Number of moves:</p>
 	<p id = "results2"></p>
+	<p>Special moves:</p>
+	<p id = "results3"></p>
+	<p>JSON text for all moves:</p>
+	<p id = "results4"></p>
 
 </body>
 </html>
