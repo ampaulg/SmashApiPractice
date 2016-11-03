@@ -4,7 +4,7 @@ function makeSelect(){
 	var str1 = "http://api.kuroganehammer.com/api/Characters?fields=name%2Cid";
 	var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", str1, false );
-    xmlHttp.send( null );
+    //xmlHttp.send( null );
     var characterArr = JSON.parse(xmlHttp.responseText);
     var length = characterArr.length;
 
